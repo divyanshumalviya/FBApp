@@ -1,0 +1,26 @@
+<app-admin></app-admin>
+<h3>Add an Airline</h3>
+<div class="form-group row">
+    <label class="col-sm-2 col-form-label">Flight Name:</label>
+    <div class="col-sm-10">
+        <input type="text"  class="form-control" [(ngModel)]="flightName"
+        placeholder="Flight Name">        
+    </div>
+    <label class="col-sm-2 col-form-label">Flight Number:</label>
+    <div class="col-sm-10">
+        <input type="text"  class="form-control" [(ngModel)]="flightNumber"
+        placeholder="Flight Number">        
+    </div>
+    <label class="col-sm-2 col-form-label">Contact Number:</label>
+    <div class="col-sm-10">
+        <input type="text"  class="form-control" [(ngModel)]="contactNo"
+        placeholder="Contact Number">        
+    </div>
+    <label class="col-sm-2 col-form-label">Address:</label>
+    <div class="col-sm-10">
+        <input type="text"  class="form-control" [(ngModel)]="address"
+        placeholder="Address">        
+    </div>
+</div>
+
+<button (click)="addAirline()" class="btn btn-primary">Add</button>

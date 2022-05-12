@@ -1,0 +1,73 @@
+<app-users></app-users>
+<h3>Search a Flight</h3>
+
+<div class="form-group row ">
+    
+    <label class="col-sm-2 col-form-label">From:</label>
+    <div class="col-sm-4">
+        <input type="text" class="form-control" [(ngModel)]="from" placeholder="From">
+    </div>
+    <label class="col-sm-2 col-form-label">To:</label>
+    <div class="col-sm-4">
+        <input type="text" class="form-control" [(ngModel)]="to" placeholder="To">
+    </div>
+
+
+    <label class="col-sm-2 col-form-label">Departure Time:</label>
+    <div class="col-sm-4">
+        
+         <input type="text" class="form-control" [(ngModel)]="start" placeholder="Departure Time"> 
+    </div>
+    <label class="col-sm-2 col-form-label">Arrival Time:</label>
+    <div class="col-sm-4">
+        <!-- <ngb-timepicker [(ngModel)]="end"></ngb-timepicker> -->
+   
+        <input type="text" class="form-control" [(ngModel)]="end" placeholder="Arrival time">
+    </div>
+
+
+    <label class="col-sm-2 col-form-label">Number of Passangers:</label>
+    <div class="col-sm-4">
+        <!-- <ngb-timepicker [(ngModel)]="end"></ngb-timepicker> -->
+   
+        <input type="text" class="form-control" [(ngModel)]="totalPassangers" placeholder="Number of Passangers">
+    </div>
+
+</div>
+<br>
+<div class="text-center">
+    <button (click)="SeachClick()" class="btn btn-primary ">Search</button>
+</div>
+
+<div *ngIf="searchDiv" class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Flight Name</th>
+                <th>Flight Number</th>
+                <th>From</th>
+                <th>Departure</th>
+                <th>To</th>
+                <th>Arrival</th>
+                <th>Total Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let dataItem of serachResult">
+                <td>{{dataItem.flightName}}</td>
+                <td>{{dataItem.flightNumber}}</td>
+                <td>{{dataItem.source}}</td>
+                <td>{{dataItem.departure}}</td>
+                <td>{{dataItem.destination}}</td>
+                <td>{{dataItem.arrival}}</td>
+                <td>{{dataItem.totalPrice}}</td>
+                <td>
+                    <button type="button" class="btn btn-light mr-1 nav-item nav-link-edit"
+                    routerLink="/BookFlight/{{dataItem.flightNumber}}"> Book Flight</button>
+                    <!-- <button type="button" class="btn btn-light mr-1"> Delete</button> -->
+                </td>
+    
+            </tr>
+        </tbody>    
+    </table>   
+</div>

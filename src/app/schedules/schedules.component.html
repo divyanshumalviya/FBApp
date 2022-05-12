@@ -1,0 +1,43 @@
+<app-admin></app-admin>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Flight Number</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Departure Time</th>
+            <th>Arrival Time</th>
+            <th>Scheduled Days</th>
+            <th>Business seats</th>
+            <th>Non-Business seats</th>
+            <th>Business price</th>
+            <th>Non-Business price</th>
+            <th>Meal</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dataItem of ScheduleList">
+            <td>{{dataItem.flightNumber}}</td>
+            <td>{{dataItem.from}}</td>
+            <td>{{dataItem.to}}</td>
+            <td>{{dataItem.start}}</td>
+            <td>{{dataItem.end}}</td>
+            <td>{{dataItem.scheduledDays}}</td>
+            <td>{{dataItem.bcseats}}</td>
+            <td>{{dataItem.nbcseats}}</td>
+            <td>{{dataItem.bcprice}}</td>
+            <td>{{dataItem.nbcprice}}</td>
+            <td>{{dataItem.meal}}</td>
+            <td>{{dataItem.status}}</td>
+            <td>
+                <button type="button" routerLink="/UpdateSchedule/{{dataItem.flightNumber}}" 
+                class="btn btn-primary mr-1" > Edit</button>
+                <!-- <button type="button" class="btn btn-light mr-1"> Delete</button>
+                 -->
+            </td>
+
+        </tr>
+    </tbody>
+
+</table>

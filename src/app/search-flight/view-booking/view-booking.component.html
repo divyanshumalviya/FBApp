@@ -1,0 +1,54 @@
+<app-users></app-users>
+
+<div class="row">
+    <label class="col-sm-2 col-form-label">Enter PNR:</label>
+    <div class="col-sm-4">
+        <input type="text" class="form-control" [(ngModel)]="pnr" placeholder="Enter PNR">
+    </div>
+    <div class="text-center col-sm-4">
+        <button (click)="ViewBookingClick()" class="btn btn-primary ">View Booking</button>
+    </div>
+</div>
+
+<br>
+<div *ngIf="searchDiv" class="container">
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Flight Name</th>
+            <th>Flight No.</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Departure Time</th>
+            <th>Arrival Time</th>
+            <th>Total Seats</th>
+            <th>Total Price</th>
+            <th>Passanger Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Seat No</th>
+            <th>Booking Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dataItem of bookingDetails">
+            <td>{{dataItem.flightName}}</td>
+            <td>{{dataItem.flightNumber}}</td>
+            <td>{{dataItem.source}}</td>
+            <td>{{dataItem.destination}}</td>
+            <td>{{dataItem.departure}}</td>
+            <td>{{dataItem.arrival}}</td>
+            <td>{{dataItem.totalSeats}}</td>
+            <td>{{dataItem.totalPrice}}</td>
+            <td>{{dataItem.passangerName}}</td>
+            <td>{{dataItem.age}}</td>
+            <td>{{dataItem.gender}}</td>
+            <td>{{dataItem.seatNo}}</td>
+            <td>{{dataItem.bookingStatus}}</td>            
+        </tr>
+    </tbody>
+</table>
+<div class="text-center">
+    <button (click)="CancelBookingClick()" class="btn btn-primary ">Cancel Booking</button>
+</div>
+</div>

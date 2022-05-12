@@ -1,0 +1,111 @@
+<app-admin></app-admin>
+<h3>Add a Schedule</h3>
+
+<div class="form-group row ">
+    <label class="col-sm-2 col-form-label">Flight Number:</label>
+    <div class="col-sm-4">
+        <select [(ngModel)]="flightNo">
+            <option [ngValue]=0 disabled selected>Select</option>
+            <option [value]="c" *ngFor="let c of FlightNos">
+                {{c}}
+            </option>
+        </select>
+        <!-- <select class="form-control" [(ngModel)]="flightNo" name="key"  #key="ngModel" required>
+    <option value="undefined" selected disabled>Select option</option>
+    <option  [value]="c" *ngFor="let c of FlightNos">{{c}</option>
+</select> -->
+
+        <!-- <select name="Flight Number:" ngModel>
+            <option [ngValue]="null"  disabled [selected]>Select User</option>
+            <option [ngValue]="c" *ngFor="let c of FlightNos">
+              {{c}}
+            </option>
+          </select> -->
+
+        <!-- <input type="text"  class="form-control" [(ngModel)]="flightNo"
+        placeholder="Flight Number">         -->
+    </div>
+    <label class="col-sm-2 col-form-label">Scheduled Days:</label>
+    <div class="col-sm-4">
+        <input type="text" class="form-control" [(ngModel)]="scheduledDays" placeholder="Scheduled Days">
+    </div>
+    <label class="col-sm-2 col-form-label">From:</label>
+    <div class="col-sm-4">
+        <input type="text" class="form-control" [(ngModel)]="from" placeholder="From">
+    </div>
+
+
+    <label class="col-sm-2 col-form-label">To:</label>
+    <div class="col-sm-4">
+        <input type="text" class="form-control" [(ngModel)]="to" placeholder="To">
+    </div>
+    <label class="col-sm-2 col-form-label">Start:</label>
+    <div class="col-sm-4">
+        <!-- <ngb-timepicker [(ngModel)]="start"></ngb-timepicker> -->
+        
+        <input type="text" class="form-control" [(ngModel)]="start" placeholder="Departure Time">
+    </div>
+
+
+    <label class="col-sm-2 col-form-label">End:</label>
+    <div class="col-sm-4">
+        <!-- <ngb-timepicker [(ngModel)]="end"></ngb-timepicker> -->
+   
+        <input type="text" class="form-control" [(ngModel)]="end" placeholder="Arrival time">
+    </div>
+
+
+
+    <label class="col-sm-2 col-form-label">Business Seats:</label>
+    <div class="col-sm-4">
+        <input type="text" class="form-control" [(ngModel)]="bCSeats" placeholder="Business class Seats">
+    </div>
+    <label class="col-sm-2 col-form-label">Non-Business Seats:</label>
+    <div class="col-sm-4">
+        <input type="text" class="form-control" [(ngModel)]="nBCSeats" placeholder="Non-business class seats">
+    </div>
+
+
+    <label class="col-sm-2 col-form-label">Business Price:</label>
+    <div class="col-sm-4">
+        <input type="text" class="form-control" [(ngModel)]="bCPrice" placeholder="business class price">
+    </div>
+    <label class="col-sm-2 col-form-label">Non-Business Price:</label>
+    <div class="col-sm-4">
+        <input type="text" class="form-control" [(ngModel)]="nBCPrice" placeholder="Non-business class price">
+    </div>
+
+
+    <label class="col-sm-2 col-form-label">Meal:</label>
+    <div class="col-sm-4">
+        <input type="text" class="form-control" [(ngModel)]="mealType" placeholder="MealType">
+    </div>
+    <label class="col-sm-2 col-form-label">Status:</label>
+    <div class="col-sm-4">
+        <input type="text" class="form-control" [(ngModel)]="status" placeholder="Status">
+    </div>
+
+</div>
+<br>
+<div class="text-center">
+    <button (click)="addSchedule()" class="btn btn-primary ">Add Schedule</button>
+</div>
+
+<!-- <div>
+    <p>
+        {{start}}
+    </p>
+</div> -->
+
+<!-- <div class="form-check form-check-inline">    
+    <label  for="inlineCheckbox1">Flight No:</label>
+    <input type="text"  class="form-control" 
+        placeholder="Flight Name"> 
+  </div>
+  <div class="form-check form-check-inline">
+    <label  for="inlineCheckbox2">Flight Name:</label>
+    <input type="text"  class="form-control" 
+        placeholder="Flight Name"> 
+  </div> -->
+
+<!-- <button (click)="addAirline()" class="btn btn-primary">Add</button> -->

@@ -1,0 +1,35 @@
+<div class="col-sm-3"></div>
+<br><br>
+<div class="container col-sm-6" style="border-radius: 15px 50px; background: lightskyblue;" >
+    <br><h1 >Login</h1>
+    <div class="row">
+        <label class="col-sm-2 col-form-label">Email:</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" [(ngModel)]="email" placeholder="Enter registered email">
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <label class="col-sm-2 col-form-label">Password:</label>
+        <div class="col-sm-4">
+            <input type="password" class="form-control" [(ngModel)]="password" placeholder="Enter password">
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <label class="col-sm-2 col-form-label">Login as:</label>
+        <div class="col-sm-4">
+            <select [(ngModel)]="userType">
+                <option [ngValue]=0 disabled selected>Select Type</option>
+                <option value="Admin">Admin </option>
+                <option value="User">User </option>
+            </select>
+        </div>
+    </div>
+    <br>
+    <div class="text-center col-sm-4">
+        <button (click)="LoginClick()" class="btn btn-primary ">Login</button>
+    </div>
+    <br>
+</div>
+<div class="col-sm-3"></div>

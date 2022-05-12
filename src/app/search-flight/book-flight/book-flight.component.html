@@ -1,0 +1,80 @@
+<app-users></app-users>
+<h3>Add Booking Details</h3>
+<div class="form-group row">
+    <label class="col-sm-2 col-form-label">Total Seats:</label>
+    <div class="col-sm-4">
+        <input type="number" class="form-control" [(ngModel)]="totalSeats" (change)="somethingChanged()"
+            placeholder="Number of Passanger">
+    </div>
+    <label class="col-sm-2 col-form-label">Journey Date:</label>
+    <div class="col-sm-4">
+        <input type="text" class="form-control" [(ngModel)]="journeyDate" placeholder="Journey Date">
+    </div>
+</div>
+<br>
+
+<div>
+    <ol>
+        <li *ngFor="let item of counter(totalSeats);index as i">
+            <div class="row">
+            <label class="col-sm-1 col-form-label">Name:</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control " [(ngModel)]="pName[i]" placeholder="Name">
+
+            </div>
+
+            <label class="col-sm-1 col-form-label">Age:</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" [(ngModel)]="pAge[i]" placeholder="Age">
+            </div>
+            <label class="col-sm-1 col-form-label">Gender:</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" [(ngModel)]="pGender[i]" placeholder="Gender">
+            </div>
+            <label class="col-sm-1 col-form-label">Seat Number:</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" [(ngModel)]="pSeatNo[i]" placeholder="Seat Number:">
+            </div>
+        </div>
+        </li>
+    </ol>
+</div>
+
+
+<button (click)="BookFlight()" class="btn btn-primary">Book Flight</button>
+
+<!-- 
+<label class="col-sm-2 col-form-label">Seat Number:</label>
+    <div class="col-sm-10">
+        <input type="number"  class="form-control" [(ngModel)]="totalSeats"
+        (change)="somethingChanged()" placeholder="Seat Number:">        
+    </div>
+
+    <div>
+        <ul>
+            <li *ngFor="let item of counter(totalSeats)">
+                <label class="col-sm-2 col-form-label">Name:</label>
+    <div class="col-sm-10">
+        <input type="text"  class="form-control" [(ngModel)]="pName"
+        placeholder="Name">        
+    </div>
+    <label class="col-sm-2 col-form-label">Age:</label>
+    <div class="col-sm-10">
+        <input type="text"  class="form-control" [(ngModel)]="pAge"
+        placeholder="Age">        
+    </div>
+    <label class="col-sm-2 col-form-label">Gender:</label>
+    <div class="col-sm-10">
+        <input type="text"  class="form-control" [(ngModel)]="pGender"
+        placeholder="Gender">        
+    </div>
+    <label class="col-sm-2 col-form-label">Seat Number:</label>
+    <div class="col-sm-10">
+        <input type="text"  class="form-control" [(ngModel)]="pSeatNo"
+        placeholder="Seat Number:">        
+    </div>
+            </li>
+        </ul>
+    </div>
+
+       -->

@@ -1,0 +1,35 @@
+<div class="container">
+    <h3 class="d-flex justify-content-center">Flight Booking Portal</h3>
+
+    <nav class="navbar navbar-expand-sm bg-light navbar-dark">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <div ngbDropdown class="d-inline-block">
+                    <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Manage
+                        Airlines</button>
+                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                        <button ngbDropdownItem routerLink="/GetAllAirline">View All Airlines</button>
+                        <button ngbDropdownItem routerLink="/AddEditAirline">Add Airline</button>
+
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <div ngbDropdown class="d-inline-block">
+                    <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Manage
+                        Schedules</button>
+                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                        <button ngbDropdownItem routerLink="/GetAllSchedule">View All Schedules</button>
+                        <button ngbDropdownItem routerLink='/AddEditSchedule'>Add Schedule</button>
+
+                    </div>
+                </div>
+                <!-- <button routerLink="GetAllAirline"
+                class="m-1 btn btn-light btn-outline-primary" Button>Manage Schedules</button> -->
+
+            </li>
+        </ul>
+    </nav>
+    <button (click)="SignOutClick()" class="btn btn-primary ">Sign Out</button>
+                        
+</div>
